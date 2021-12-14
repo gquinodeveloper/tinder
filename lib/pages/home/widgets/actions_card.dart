@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ActionsCard extends StatelessWidget {
   @override
@@ -9,9 +10,9 @@ class ActionsCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _circle(w: 60.0, h: 60.0, path: "assets/close.png"),
-          _circle(w: 70.0, h: 70.0, path: "assets/estrella.png"),
-          _circle(w: 60.0, h: 60.0, path: "assets/me-gusta.png"),
+          _circle(w: 60.w, h: 60.h, path: "assets/close.png"),
+          _circle(w: 70.w, h: 70.h, path: "assets/estrella.png"),
+          _circle(w: 60.w, h: 60.h, path: "assets/me-gusta.png"),
         ],
       ),
     );

@@ -2,6 +2,7 @@ import 'package:app_tinder/pages/home/widgets/actions_card.dart';
 import 'package:app_tinder/pages/home/widgets/swiper_card.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -24,12 +25,12 @@ class HomePage extends StatelessWidget {
             Icons.settings_input_antenna_rounded,
             color: Colors.black,
           ),
-          SizedBox(width: 15.0),
+          SizedBox(width: 15.w),
           Icon(
             Icons.notification_add_sharp,
             color: Colors.black,
           ),
-          SizedBox(width: 20.0),
+          SizedBox(width: 20.w),
         ],
       ),
       body: Stack(
@@ -42,7 +43,7 @@ class HomePage extends StatelessWidget {
             child: SwiperCard(),
           ),
           Positioned(
-            bottom: 70.0,
+            bottom: 70.h,
             left: 0.0,
             right: 0.0,
             child: ActionsCard(),

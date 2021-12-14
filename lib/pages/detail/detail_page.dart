@@ -1,6 +1,7 @@
 import 'package:app_tinder/models/user_model.dart';
 import 'package:app_tinder/pages/home/widgets/actions_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DetailPage extends StatelessWidget {
   DetailPage({
@@ -16,13 +17,13 @@ class DetailPage extends StatelessWidget {
             alignment: Alignment.topCenter,
             child: Container(
               padding: EdgeInsets.only(
-                left: 20.0,
-                right: 20.0,
-                top: 40.0,
-                bottom: 80.0,
+                left: 20.w,
+                right: 20.w,
+                top: 40.h,
+                bottom: 80.w,
               ),
               width: double.infinity,
-              height: 550.0,
+              height: 550.h,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage("${user.photo}"),
@@ -55,7 +56,7 @@ class DetailPage extends StatelessWidget {
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
                       CircleAvatar(
-                        radius: 20.0,
+                        radius: 20.r,
                         backgroundColor: Colors.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -79,12 +80,12 @@ class DetailPage extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Container(
               padding: EdgeInsets.only(
-                top: 25.0,
-                left: 20.0,
-                right: 20.0,
+                top: 25.h,
+                left: 20.w,
+                right: 20.w,
               ),
               width: double.infinity,
-              height: 300.0,
+              height: 300.h,
               color: Colors.white,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -118,15 +119,13 @@ class DetailPage extends StatelessWidget {
                     ),
                   ),
                   Divider(),
-                  SizedBox(height: 10.0),
+                  SizedBox(height: 10.h),
                   Text(
                     "Bio",
                     style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        color: Colors.black, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 15.0),
+                  SizedBox(height: 15.h),
                   Text(
                     "${user.description}",
                     style: Theme.of(context)
@@ -139,7 +138,7 @@ class DetailPage extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 270.0,
+            bottom: 270.h,
             left: 0.0,
             right: 0.0,
             child: ActionsCard(),

@@ -2,14 +2,15 @@ import 'package:app_tinder/models/user_model.dart';
 import 'package:app_tinder/pages/detail/detail_page.dart';
 import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SwiperCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Swiper(
       itemCount: users.length,
-      itemWidth: 380.0,
-      itemHeight: 550.0,
+      itemWidth: 380.w,
+      itemHeight: 550.h,
       layout: SwiperLayout.TINDER,
       onTap: (index) {
         print("$index");
@@ -26,13 +27,13 @@ class SwiperCard extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
           padding: EdgeInsets.only(
-            left: 20.0,
-            right: 20.0,
-            bottom: 80.0,
+            left: 20.w,
+            right: 20.w,
+            bottom: 80.h,
           ),
           decoration: BoxDecoration(
             //color: Colors.red,
-            borderRadius: BorderRadius.circular(20.0),
+            borderRadius: BorderRadius.circular(20.r),
             image: DecorationImage(
               image: NetworkImage("${users[index].photo}"),
               fit: BoxFit.cover,
@@ -51,7 +52,7 @@ class SwiperCard extends StatelessWidget {
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   CircleAvatar(
-                    radius: 20.0,
+                    radius: 20.r,
                     backgroundColor: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
